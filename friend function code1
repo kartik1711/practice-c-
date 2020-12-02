@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class kartik2;
+class kartik
+{
+    private:
+    int meters;
+    friend int disp(kartik,kartik2);
+    public:
+    kartik()
+    {
+        meters=0;
+    }
+};
+class kartik2
+{
+    private:
+    int meters;
+    friend int disp(kartik,kartik2);
+    public:
+    kartik2()
+    {
+        meters=0;
+    }
+};
+int disp(kartik s,kartik2 m)
+{
+    s.meters=90;
+    m.meters=20;
+    return s.meters+m.meters;
+}
+int main()
+{
+  kartik k;
+  kartik2 k1;
+  cout<<"the distance is"<<disp(k,k1);
+  return 0;
+}
